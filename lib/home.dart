@@ -6,9 +6,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void playButton() {
+    void playButton(int number) {
       final player = AudioCache();
-      player.play('note1.wav');
+      player.play('note$number.wav');
     }
 
     return Scaffold(
@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple,
                 ),
                 onPressed: () {
-                  playButton();
+                  playButton(1);
                 },
                 child: null,
               ),
@@ -48,8 +48,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[400],
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                   playButton();
+                  playButton(2);
                 },
                 child: null,
               ),
@@ -62,7 +61,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[300],
                 ),
                 onPressed: () {
-                  playButton();
+                  playButton(3);
                 },
                 child: null,
               ),
@@ -75,7 +74,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[200],
                 ),
                 onPressed: () {
-                   playButton();
+                  playButton(4);
                 },
                 child: null,
               ),
@@ -86,9 +85,10 @@ class Home extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Colors.purple[100],
+                  
                 ),
                 onPressed: () {
-                   playButton();
+                  playButton(5);
                 },
                 child: null,
               ),
