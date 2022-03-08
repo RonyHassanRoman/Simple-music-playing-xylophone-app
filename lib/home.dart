@@ -6,10 +6,14 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    void playButton() {
+      final player = AudioCache();
+      player.play('note1.wav');
+    }
+
     return Scaffold(
       appBar: AppBar(
-        title:const  Text('ReCode'),
+        title: const Text('ReCode'),
         centerTitle: true,
       ),
       body: Center(
@@ -31,8 +35,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple,
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playButton();
                 },
                 child: null,
               ),
@@ -46,7 +49,7 @@ class Home extends StatelessWidget {
                 ),
                 onPressed: () {
                   final player = AudioCache();
-                  player.play('note2.wav');
+                   playButton();
                 },
                 child: null,
               ),
@@ -59,8 +62,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[300],
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playButton();
                 },
                 child: null,
               ),
@@ -73,8 +75,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[200],
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                   playButton();
                 },
                 child: null,
               ),
@@ -87,8 +88,7 @@ class Home extends StatelessWidget {
                   primary: Colors.purple[100],
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                   playButton();
                 },
                 child: null,
               ),
