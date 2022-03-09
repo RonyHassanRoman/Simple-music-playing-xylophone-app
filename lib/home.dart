@@ -15,7 +15,6 @@ class Home extends StatelessWidget {
       return Expanded(
         child: SizedBox(
           height: 50,
-          width: 100,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: color,
@@ -39,9 +38,12 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              "Xylophone App By ReCode",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Xylophone App By ReCode",
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              ),
             ),
             const SizedBox(
               height: 20,
