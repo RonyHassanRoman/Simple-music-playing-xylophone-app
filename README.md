@@ -1,4 +1,4 @@
-# mucicc
+# Xylophone App
 
 A new Flutter project.
 
