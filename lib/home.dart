@@ -11,6 +11,24 @@ class Home extends StatelessWidget {
       player.play('note$number.wav');
     }
 
+    Expanded button({Color? color, required int number}) {
+      return Expanded(
+        child: SizedBox(
+          height: 50,
+          width: 100,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: color,
+            ),
+            onPressed: () {
+              playButton(number);
+            },
+            child: null,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('ReCode'),
@@ -19,6 +37,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
               "Xylophone App By ReCode",
@@ -27,72 +46,12 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              height: 50,
-              width: 100,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                ),
-                onPressed: () {
-                  playButton(1);
-                },
-                child: null,
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              width: 100,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple[400],
-                ),
-                onPressed: () {
-                  playButton(2);
-                },
-                child: null,
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              width: 100,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple[300],
-                ),
-                onPressed: () {
-                  playButton(3);
-                },
-                child: null,
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              width: 100,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple[200],
-                ),
-                onPressed: () {
-                  playButton(4);
-                },
-                child: null,
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              width: 100,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple[100],
-                  
-                ),
-                onPressed: () {
-                  playButton(5);
-                },
-                child: null,
-              ),
-            ),
+            button(color: Colors.red, number: 1),
+            button(color: Colors.red[400], number: 2),
+            button(color: Colors.red[300], number: 3),
+            button(color: Colors.red[200], number: 4),
+            button(color: Colors.red[100], number: 5),
+
             // SizedBox(
             //   height: 50,
             //   width: 100,
